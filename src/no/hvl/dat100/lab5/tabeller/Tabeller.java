@@ -27,26 +27,31 @@ public class Tabeller {
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-		
+
 		boolean funnet = false;
 		int i = 0;
-				
+
 		while (i < tabell.length && (!funnet)) {
-			
+
 			if (tabell[i] == tall) {
 				funnet = true;
 			}
 			i++;
 		}
-		
+
 		return funnet;
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("posisjonTall ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+
+			if (tabell[i] == tall) {
+				return i;
+			}
+		}
+		return -1;
 
 	}
 
