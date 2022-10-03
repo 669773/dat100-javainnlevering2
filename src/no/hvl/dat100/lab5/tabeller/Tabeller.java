@@ -5,25 +5,67 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		int t;
 
+		for (t = 0; t < tabell.length; t++) {
+
+			System.out.println(tabell[t]);
+
+		}
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
+		String streng = "[";
 
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
-	}
+		for (int i = 0; i < tabell.length; i++) {
+			streng += tabell[i];
+
+			if (i != tabell.length - 1) {
+				streng += ",";
+			}
+		}
+
+		streng += "]";
+
+		return streng;
+	}	
 
 	// c)
 	public static int summer(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("summer ikke implementert");
+		
+		int sum = 0;
+		int t = 0;
+		
+		while (t < tabell.length) {
+			sum += tabell[t];
+		}
+		return sum;
+		
 	}
+	
+	/* Utvidet for-løkke
+	 * 
+	 * int sum = 0;
+	 *
+	 * for(int t : tabell) {
+	 *
+	 *	sum += t;
+	 *
+	 * }
+	 * return sum;
+	 */
+
+	/* Vanlig for-løkke:
+	 *
+	 * int sum = 0;
+	 *
+	 *  for(int t = 0; t < tabell.length; t++) {
+	 *	
+	 *	sum += tabell[t];
+	 * } 
+	 *	return sum;
+	 */
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
