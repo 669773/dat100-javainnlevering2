@@ -112,9 +112,26 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("erSortert ikke implementert");
-	}
+        int j = 0;
+        boolean sortert = true;
+
+        while ( sortert && j < tabell.length - 1) {
+            if (tabell[j] > tabell[j+1]) {
+                sortert = false;
+            }
+            j++;
+        }
+        return sortert;
+    }
+
+    public static void main(String[] args) {
+        int[] sortertTabell = {1, 7, 11, 21};
+        int[] usortertTabell = {1, 11, 7, 21};
+
+        System.out.println(erSortert(sortertTabell));
+        System.out.println(erSortert(usortertTabell));
+    }
+	
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
